@@ -1,0 +1,55 @@
+[2026-07-23T06:38:32.208+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T06:38:32.241+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_medallion_pipeline.transform_and_load_gold_layer manual__2026-07-23T06:37:26+00:00 [queued]>
+[2026-07-23T06:38:32.255+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_medallion_pipeline.transform_and_load_gold_layer manual__2026-07-23T06:37:26+00:00 [queued]>
+[2026-07-23T06:38:32.257+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2026-07-23T06:38:32.280+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): transform_and_load_gold_layer> on 2026-07-23 06:37:26+00:00
+[2026-07-23T06:38:32.294+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'youtube_medallion_pipeline', 'transform_and_load_gold_layer', 'manual__2026-07-23T06:37:26+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/youtube_medallion_pipeline.py', '--cfg-path', '/tmp/tmpprjxifai']
+[2026-07-23T06:38:32.298+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=352) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-23T06:38:32.299+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask transform_and_load_gold_layer
+[2026-07-23T06:38:32.301+0000] {standard_task_runner.py:72} INFO - Started process 353 to run task
+[2026-07-23T06:38:32.397+0000] {task_command.py:467} INFO - Running <TaskInstance: youtube_medallion_pipeline.transform_and_load_gold_layer manual__2026-07-23T06:37:26+00:00 [running]> on host cf34b06c6322
+[2026-07-23T06:38:32.528+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering_team' AIRFLOW_CTX_DAG_ID='youtube_medallion_pipeline' AIRFLOW_CTX_TASK_ID='transform_and_load_gold_layer' AIRFLOW_CTX_EXECUTION_DATE='2026-07-23T06:37:26+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-23T06:37:26+00:00'
+[2026-07-23T06:38:32.530+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T06:38:32.548+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-23T06:38:32.553+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/run_pipeline.py --batch "initial" --step gold']
+[2026-07-23T06:38:32.572+0000] {subprocess.py:86} INFO - Output:
+[2026-07-23T06:38:35.502+0000] {subprocess.py:93} INFO - /opt/***/scripts/stage_gold.py:39: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2026-07-23T06:38:35.504+0000] {subprocess.py:93} INFO -   df = pd.read_sql(query, conn)
+[2026-07-23T06:38:45.672+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T06:38:45.674+0000] {subprocess.py:93} INFO - STARTING PIPELINE EXECUTION
+[2026-07-23T06:38:45.676+0000] {subprocess.py:93} INFO - Run ID:     run_initial_20260723_063834_2eec
+[2026-07-23T06:38:45.678+0000] {subprocess.py:93} INFO - Batch Type: INITIAL
+[2026-07-23T06:38:45.680+0000] {subprocess.py:93} INFO - Step:       GOLD
+[2026-07-23T06:38:45.681+0000] {subprocess.py:93} INFO - Reset DB:   False
+[2026-07-23T06:38:45.683+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T06:38:45.685+0000] {subprocess.py:93} INFO - 
+[2026-07-23T06:38:45.687+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T06:38:45.688+0000] {subprocess.py:93} INFO - RUNNING GOLD LAYER STAGE - BATCH ID: run_initial_20260723_063834_2eec
+[2026-07-23T06:38:45.690+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T06:38:45.692+0000] {subprocess.py:93} INFO - Executing Gold layer transformations (SCD Type 1 & 2, Facts, Marts)...
+[2026-07-23T06:38:45.693+0000] {subprocess.py:93} INFO - Gold transformations completed successfully.
+[2026-07-23T06:38:45.695+0000] {subprocess.py:93} INFO - 
+[2026-07-23T06:38:45.698+0000] {subprocess.py:93} INFO - Exporting Gold layers and reporting marts to physical disk folders...
+[2026-07-23T06:38:45.699+0000] {subprocess.py:93} INFO - Exported gold.dim_channels to /opt/***/gold/dim_channels/dim_channels.csv (20006 rows).
+[2026-07-23T06:38:45.701+0000] {subprocess.py:93} INFO - Exported gold.dim_videos to /opt/***/gold/dim_videos/dim_videos.csv (50001 rows).
+[2026-07-23T06:38:45.703+0000] {subprocess.py:93} INFO - Exported gold.fact_video_stats to /opt/***/gold/fact_video_stats/fact_video_stats.csv (50005 rows).
+[2026-07-23T06:38:45.705+0000] {subprocess.py:93} INFO - Exported gold.mart_channel_performance to /opt/***/gold/mart_channel_performance/mart_channel_performance.csv (11763 rows).
+[2026-07-23T06:38:45.706+0000] {subprocess.py:93} INFO - Exported gold.mart_category_insights to /opt/***/gold/mart_category_insights/mart_category_insights.csv (491 rows).
+[2026-07-23T06:38:45.708+0000] {subprocess.py:93} INFO - Exported gold.mart_kpi_summary to /opt/***/gold/mart_kpi_summary/mart_kpi_summary.csv (1 rows).
+[2026-07-23T06:38:45.709+0000] {subprocess.py:93} INFO - 
+[2026-07-23T06:38:45.711+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T06:38:45.713+0000] {subprocess.py:93} INFO - GOLD LAYER SUMMARY
+[2026-07-23T06:38:45.714+0000] {subprocess.py:93} INFO - Channels in Dimension: 20006 (including dummy & historical versions)
+[2026-07-23T06:38:45.715+0000] {subprocess.py:93} INFO - Videos in Dimension:   50001
+[2026-07-23T06:38:45.717+0000] {subprocess.py:93} INFO - Total Fact Rows:       50005
+[2026-07-23T06:38:45.719+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T06:38:45.720+0000] {subprocess.py:93} INFO - 
+[2026-07-23T06:38:45.722+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T06:38:45.723+0000] {subprocess.py:93} INFO - PIPELINE COMPLETED SUCCESSFULLY!
+[2026-07-23T06:38:45.725+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T06:38:45.866+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-23T06:38:45.917+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T06:38:45.920+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=youtube_medallion_pipeline, task_id=transform_and_load_gold_layer, run_id=manual__2026-07-23T06:37:26+00:00, execution_date=20260723T063726, start_date=20260723T063832, end_date=20260723T063845
+[2026-07-23T06:38:45.968+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T06:38:46.000+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T06:38:46.005+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

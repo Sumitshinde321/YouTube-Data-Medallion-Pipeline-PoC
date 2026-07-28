@@ -1,0 +1,2 @@
+Id,Name,Keywords,Description,Tags,UserId,_loaded_at,_source_file,_batch_id,_reject_reason
+,Faulty Channel (No ID),faulty,This channel has no ID,faulty,user_123,2026-07-23 06:36:26.354875,channels.csv,run_incremental_20260723_063626_8506,Null channel ID; 

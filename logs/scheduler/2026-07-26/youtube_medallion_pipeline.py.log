@@ -1,0 +1,70 @@
+[2026-07-26T11:45:45.862+0000] {processor.py:186} INFO - Started process (PID=160) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:45:45.865+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:45:45.871+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:45:45.870+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:45:45.970+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:45:46.072+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:45:46.072+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:45:46.113+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:45:46.113+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:45:46.177+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 0.330 seconds
+[2026-07-26T11:46:16.743+0000] {processor.py:186} INFO - Started process (PID=165) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:46:16.748+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:46:16.756+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:46:16.755+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:46:16.815+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:46:16.932+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:46:16.931+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:46:17.005+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:46:17.005+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:46:17.061+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 0.330 seconds
+[2026-07-26T11:46:47.154+0000] {processor.py:186} INFO - Started process (PID=170) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:46:47.156+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:46:47.162+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:46:47.161+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:46:47.200+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:46:47.263+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:46:47.262+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:46:47.289+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:46:47.289+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:46:47.324+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 0.178 seconds
+[2026-07-26T11:47:17.418+0000] {processor.py:186} INFO - Started process (PID=175) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:47:17.420+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:47:17.425+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:47:17.424+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:47:17.450+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:47:17.510+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:47:17.510+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:47:17.538+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:47:17.537+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:47:17.570+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 0.162 seconds
+[2026-07-26T11:47:47.645+0000] {processor.py:186} INFO - Started process (PID=180) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:47:47.648+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:47:47.653+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:47:47.652+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:47:47.679+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:47:47.740+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:47:47.740+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:47:47.774+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:47:47.774+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:47:47.829+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 0.191 seconds
+[2026-07-26T11:48:17.943+0000] {processor.py:186} INFO - Started process (PID=185) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:48:17.945+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:48:17.950+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:48:17.949+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:48:17.981+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:48:18.049+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:48:18.048+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:48:18.084+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:48:18.084+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:48:18.128+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 0.193 seconds
+[2026-07-26T11:49:00.496+0000] {processor.py:186} INFO - Started process (PID=190) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:49:00.506+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:49:00.599+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:49:00.584+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:49:01.476+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:49:02.262+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:49:02.256+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:49:02.828+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:49:02.827+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:49:03.446+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 3.066 seconds
+[2026-07-26T11:49:33.905+0000] {processor.py:186} INFO - Started process (PID=195) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:49:33.913+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:49:33.936+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:49:33.934+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:49:34.102+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:49:34.542+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:49:34.541+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:49:34.898+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:49:34.897+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:49:38.570+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 4.735 seconds
+[2026-07-26T11:50:10.265+0000] {processor.py:186} INFO - Started process (PID=200) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:50:10.291+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:50:10.319+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:50:10.316+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:50:10.593+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:50:11.558+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:50:11.555+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:50:11.995+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:50:11.995+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:50:12.096+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 1.923 seconds
+[2026-07-26T11:51:28.895+0000] {processor.py:186} INFO - Started process (PID=205) to work on /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:51:28.958+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/youtube_medallion_pipeline.py for tasks to queue
+[2026-07-26T11:51:29.645+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:51:29.494+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:51:31.191+0000] {processor.py:925} INFO - DAG(s) 'youtube_medallion_pipeline' retrieved from /opt/airflow/dags/youtube_medallion_pipeline.py
+[2026-07-26T11:51:34.468+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:51:34.466+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-26T11:51:35.036+0000] {logging_mixin.py:190} INFO - [2026-07-26T11:51:35.034+0000] {dag.py:4180} INFO - Setting next_dagrun for youtube_medallion_pipeline to None, run_after=None
+[2026-07-26T11:51:35.566+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/youtube_medallion_pipeline.py took 8.039 seconds

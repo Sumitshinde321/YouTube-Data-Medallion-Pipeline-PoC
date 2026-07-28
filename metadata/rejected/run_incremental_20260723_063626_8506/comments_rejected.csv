@@ -1,0 +1,2 @@
+Id,Text,AuthorName,AuthorChannelId,PublishedTime,LikeCount,VideoId,GrabDate,_loaded_at,_source_file,_batch_id,_reject_reason
+,Faulty comment with no ID,Anonymous,UCNbnKFaHnNsw_T9_BNpqgtg,1 day ago,0,___EuLzIPr0,2019-11-17 14:00:00.000,2026-07-23 06:36:31.722288,comments.csv,run_incremental_20260723_063626_8506,Null comment ID; 

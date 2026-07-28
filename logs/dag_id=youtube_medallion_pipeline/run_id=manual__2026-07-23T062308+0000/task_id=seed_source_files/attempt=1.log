@@ -1,0 +1,44 @@
+[2026-07-23T06:24:01.758+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T06:24:01.799+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_medallion_pipeline.seed_source_files manual__2026-07-23T06:23:08+00:00 [queued]>
+[2026-07-23T06:24:01.827+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_medallion_pipeline.seed_source_files manual__2026-07-23T06:23:08+00:00 [queued]>
+[2026-07-23T06:24:01.829+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2026-07-23T06:24:01.855+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): seed_source_files> on 2026-07-23 06:23:08+00:00
+[2026-07-23T06:24:01.869+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'youtube_medallion_pipeline', 'seed_source_files', 'manual__2026-07-23T06:23:08+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/youtube_medallion_pipeline.py', '--cfg-path', '/tmp/tmpkcpcqu8y']
+[2026-07-23T06:24:01.875+0000] {standard_task_runner.py:105} INFO - Job 2: Subtask seed_source_files
+[2026-07-23T06:24:01.875+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=427) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-23T06:24:01.877+0000] {standard_task_runner.py:72} INFO - Started process 428 to run task
+[2026-07-23T06:24:01.972+0000] {task_command.py:467} INFO - Running <TaskInstance: youtube_medallion_pipeline.seed_source_files manual__2026-07-23T06:23:08+00:00 [running]> on host 0abbff909cff
+[2026-07-23T06:24:02.144+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering_team' AIRFLOW_CTX_DAG_ID='youtube_medallion_pipeline' AIRFLOW_CTX_TASK_ID='seed_source_files' AIRFLOW_CTX_EXECUTION_DATE='2026-07-23T06:23:08+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-23T06:23:08+00:00'
+[2026-07-23T06:24:02.146+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T06:24:02.207+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-23T06:24:02.211+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/seed_sources.py --size 50000']
+[2026-07-23T06:24:02.234+0000] {subprocess.py:86} INFO - Output:
+[2026-07-23T06:24:37.140+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T06:24:37.142+0000] {subprocess.py:93} INFO - STARTING DATA SEEDING AND SPLITTING PROCESS
+[2026-07-23T06:24:37.145+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T06:24:37.146+0000] {subprocess.py:93} INFO - Reading source files from: /opt/***/data
+[2026-07-23T06:24:37.148+0000] {subprocess.py:93} INFO - Writing seeded files to: /opt/***/source_data
+[2026-07-23T06:24:37.149+0000] {subprocess.py:93} INFO - 
+[2026-07-23T06:24:37.151+0000] {subprocess.py:93} INFO - Processing Channels...
+[2026-07-23T06:24:37.153+0000] {subprocess.py:93} INFO - Total raw channels in source: 43471
+[2026-07-23T06:24:37.155+0000] {subprocess.py:93} INFO - Simulating SCD Type 2 updates for channels...
+[2026-07-23T06:24:37.156+0000] {subprocess.py:93} INFO - Seeded Channels -> Initial: 14000 rows | Incremental: 6006 rows
+[2026-07-23T06:24:37.158+0000] {subprocess.py:93} INFO - 
+[2026-07-23T06:24:37.159+0000] {subprocess.py:93} INFO - Processing Videos...
+[2026-07-23T06:24:37.161+0000] {subprocess.py:93} INFO - Total processed videos: 50000
+[2026-07-23T06:24:37.162+0000] {subprocess.py:93} INFO - Simulating SCD Type 1 updates and stats changes for videos...
+[2026-07-23T06:24:37.163+0000] {subprocess.py:93} INFO - Seeded Videos -> Initial: 35000 rows | Incremental: 15008 rows
+[2026-07-23T06:24:37.165+0000] {subprocess.py:93} INFO - 
+[2026-07-23T06:24:37.166+0000] {subprocess.py:93} INFO - Processing Comments...
+[2026-07-23T06:24:37.168+0000] {subprocess.py:93} INFO - Total processed comments: 50000
+[2026-07-23T06:24:37.169+0000] {subprocess.py:93} INFO - Seeded Comments -> Initial: 35000 rows | Incremental: 15001 rows
+[2026-07-23T06:24:37.170+0000] {subprocess.py:93} INFO - 
+[2026-07-23T06:24:37.171+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T06:24:37.173+0000] {subprocess.py:93} INFO - SEEDING COMPLETED SUCCESSFULLY!
+[2026-07-23T06:24:37.174+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T06:24:37.336+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-23T06:24:37.391+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T06:24:37.392+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=youtube_medallion_pipeline, task_id=seed_source_files, run_id=manual__2026-07-23T06:23:08+00:00, execution_date=20260723T062308, start_date=20260723T062401, end_date=20260723T062437
+[2026-07-23T06:24:37.435+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T06:24:37.495+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T06:24:37.498+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,99 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: youtube_postgres
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=youtube_dw
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./scripts/sql/init_multiple_dbs.sql:/docker-entrypoint-initdb.d/init_multiple_dbs.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow -d youtube_dw"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  airflow-init:
+    build: .
+    container_name: youtube_airflow_init
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow_db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+          --username admin \
+          --firstname Admin \
+          --lastname User \
+          --role Admin \
+          --email admin@example.com \
+          --password admin
+
+  airflow-webserver:
+    build: .
+    container_name: youtube_airflow_webserver
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow_db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True
+    command: webserver
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./source_data:/opt/airflow/source_data
+      - ./logs:/opt/airflow/logs
+      - ./bronze:/opt/airflow/bronze
+      - ./silver:/opt/airflow/silver
+      - ./gold:/opt/airflow/gold
+      - ./metadata:/opt/airflow/metadata
+      - C:/Users/hp/OneDrive/Desktop/YouTube Dataset:/opt/airflow/data
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  airflow-scheduler:
+    build: .
+    container_name: youtube_airflow_scheduler
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow_db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+    command: scheduler
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./source_data:/opt/airflow/source_data
+      - ./logs:/opt/airflow/logs
+      - ./bronze:/opt/airflow/bronze
+      - ./silver:/opt/airflow/silver
+      - ./gold:/opt/airflow/gold
+      - ./metadata:/opt/airflow/metadata
+      - C:/Users/hp/OneDrive/Desktop/YouTube Dataset:/opt/airflow/data
+
+volumes:
+  pgdata:
