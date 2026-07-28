@@ -1,0 +1,43 @@
+[2026-07-23T07:20:21.084+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T07:20:21.241+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_medallion_pipeline.stage_bronze_layer manual__2026-07-23T07:19:01.697127+00:00 [queued]>
+[2026-07-23T07:20:21.318+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_medallion_pipeline.stage_bronze_layer manual__2026-07-23T07:19:01.697127+00:00 [queued]>
+[2026-07-23T07:20:21.321+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2026-07-23T07:20:21.502+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): stage_bronze_layer> on 2026-07-23 07:19:01.697127+00:00
+[2026-07-23T07:20:21.526+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'youtube_medallion_pipeline', 'stage_bronze_layer', 'manual__2026-07-23T07:19:01.697127+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/youtube_medallion_pipeline.py', '--cfg-path', '/tmp/tmphojh_faz']
+[2026-07-23T07:20:21.533+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask stage_bronze_layer
+[2026-07-23T07:20:21.557+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=853) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-23T07:20:21.561+0000] {standard_task_runner.py:72} INFO - Started process 856 to run task
+[2026-07-23T07:20:21.727+0000] {task_command.py:467} INFO - Running <TaskInstance: youtube_medallion_pipeline.stage_bronze_layer manual__2026-07-23T07:19:01.697127+00:00 [running]> on host cf34b06c6322
+[2026-07-23T07:20:22.000+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering_team' AIRFLOW_CTX_DAG_ID='youtube_medallion_pipeline' AIRFLOW_CTX_TASK_ID='stage_bronze_layer' AIRFLOW_CTX_EXECUTION_DATE='2026-07-23T07:19:01.697127+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-23T07:19:01.697127+00:00'
+[2026-07-23T07:20:22.004+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T07:20:22.097+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-23T07:20:22.100+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        batch="initial"\n        reset_flag=""\n        if [ "$batch" = "initial" ] && [ "false" = "true" ]; then\n            reset_flag="--reset"\n        fi\n        python /opt/***/scripts/run_pipeline.py --batch "$batch" --step bronze $reset_flag\n        ']
+[2026-07-23T07:20:22.133+0000] {subprocess.py:86} INFO - Output:
+[2026-07-23T07:20:47.222+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T07:20:47.227+0000] {subprocess.py:93} INFO - STARTING PIPELINE EXECUTION
+[2026-07-23T07:20:47.230+0000] {subprocess.py:93} INFO - Run ID:     run_initial_20260723_072025_6cee
+[2026-07-23T07:20:47.240+0000] {subprocess.py:93} INFO - Batch Type: INITIAL
+[2026-07-23T07:20:47.243+0000] {subprocess.py:93} INFO - Step:       BRONZE
+[2026-07-23T07:20:47.247+0000] {subprocess.py:93} INFO - Reset DB:   False
+[2026-07-23T07:20:47.250+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T07:20:47.255+0000] {subprocess.py:93} INFO - 
+[2026-07-23T07:20:47.259+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T07:20:47.263+0000] {subprocess.py:93} INFO - RUNNING BRONZE LAYER STAGE - BATCH: INITIAL
+[2026-07-23T07:20:47.267+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T07:20:47.271+0000] {subprocess.py:93} INFO - Loading /opt/***/source_data/initial/channels.csv into bronze.channels_raw...
+[2026-07-23T07:20:47.274+0000] {subprocess.py:93} INFO - Successfully loaded 14000 rows into bronze.channels_raw.
+[2026-07-23T07:20:47.277+0000] {subprocess.py:93} INFO - Loading /opt/***/source_data/initial/videos.csv into bronze.videos_raw...
+[2026-07-23T07:20:47.281+0000] {subprocess.py:93} INFO - Successfully loaded 35000 rows into bronze.videos_raw.
+[2026-07-23T07:20:47.283+0000] {subprocess.py:93} INFO - Loading /opt/***/source_data/initial/comments.csv into bronze.comments_raw...
+[2026-07-23T07:20:47.286+0000] {subprocess.py:93} INFO - Successfully loaded 35000 rows into bronze.comments_raw.
+[2026-07-23T07:20:47.290+0000] {subprocess.py:93} INFO - Bronze Stage Completed. Total Raw Records Loaded: 84000
+[2026-07-23T07:20:47.293+0000] {subprocess.py:93} INFO - 
+[2026-07-23T07:20:47.297+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T07:20:47.299+0000] {subprocess.py:93} INFO - PIPELINE COMPLETED SUCCESSFULLY!
+[2026-07-23T07:20:47.303+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T07:20:47.609+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-23T07:20:47.679+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T07:20:47.680+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=youtube_medallion_pipeline, task_id=stage_bronze_layer, run_id=manual__2026-07-23T07:19:01.697127+00:00, execution_date=20260723T071901, start_date=20260723T072021, end_date=20260723T072047
+[2026-07-23T07:20:47.757+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T07:20:47.804+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T07:20:47.810+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

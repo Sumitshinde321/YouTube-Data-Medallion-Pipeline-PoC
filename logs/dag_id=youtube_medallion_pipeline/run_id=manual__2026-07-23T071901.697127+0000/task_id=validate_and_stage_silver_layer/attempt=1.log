@@ -1,0 +1,55 @@
+[2026-07-23T07:20:49.269+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-23T07:20:49.304+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: youtube_medallion_pipeline.validate_and_stage_silver_layer manual__2026-07-23T07:19:01.697127+00:00 [queued]>
+[2026-07-23T07:20:49.323+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: youtube_medallion_pipeline.validate_and_stage_silver_layer manual__2026-07-23T07:19:01.697127+00:00 [queued]>
+[2026-07-23T07:20:49.324+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2026-07-23T07:20:49.349+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): validate_and_stage_silver_layer> on 2026-07-23 07:19:01.697127+00:00
+[2026-07-23T07:20:49.365+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'youtube_medallion_pipeline', 'validate_and_stage_silver_layer', 'manual__2026-07-23T07:19:01.697127+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/youtube_medallion_pipeline.py', '--cfg-path', '/tmp/tmpc6x1wtiy']
+[2026-07-23T07:20:49.369+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=876) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-23T07:20:49.370+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask validate_and_stage_silver_layer
+[2026-07-23T07:20:49.372+0000] {standard_task_runner.py:72} INFO - Started process 877 to run task
+[2026-07-23T07:20:49.487+0000] {task_command.py:467} INFO - Running <TaskInstance: youtube_medallion_pipeline.validate_and_stage_silver_layer manual__2026-07-23T07:19:01.697127+00:00 [running]> on host cf34b06c6322
+[2026-07-23T07:20:49.645+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineering_team' AIRFLOW_CTX_DAG_ID='youtube_medallion_pipeline' AIRFLOW_CTX_TASK_ID='validate_and_stage_silver_layer' AIRFLOW_CTX_EXECUTION_DATE='2026-07-23T07:19:01.697127+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-23T07:19:01.697127+00:00'
+[2026-07-23T07:20:49.646+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-23T07:20:49.699+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-23T07:20:49.704+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/scripts/run_pipeline.py --batch "initial" --step silver']
+[2026-07-23T07:20:49.737+0000] {subprocess.py:86} INFO - Output:
+[2026-07-23T07:20:51.921+0000] {subprocess.py:93} INFO - /opt/***/scripts/stage_silver.py:20: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2026-07-23T07:20:51.923+0000] {subprocess.py:93} INFO -   df = pd.read_sql(query, conn, params=(batch_id,))
+[2026-07-23T07:20:52.027+0000] {subprocess.py:93} INFO - /opt/***/scripts/stage_silver.py:20: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2026-07-23T07:20:52.030+0000] {subprocess.py:93} INFO -   df = pd.read_sql(query, conn, params=(batch_id,))
+[2026-07-23T07:20:52.611+0000] {subprocess.py:93} INFO - /opt/***/scripts/stage_silver.py:20: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2026-07-23T07:20:52.613+0000] {subprocess.py:93} INFO -   df = pd.read_sql(query, conn, params=(batch_id,))
+[2026-07-23T07:20:53.138+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T07:20:53.140+0000] {subprocess.py:93} INFO - STARTING PIPELINE EXECUTION
+[2026-07-23T07:20:53.142+0000] {subprocess.py:93} INFO - Run ID:     run_initial_20260723_072051_a00b
+[2026-07-23T07:20:53.146+0000] {subprocess.py:93} INFO - Batch Type: INITIAL
+[2026-07-23T07:20:53.148+0000] {subprocess.py:93} INFO - Step:       SILVER
+[2026-07-23T07:20:53.153+0000] {subprocess.py:93} INFO - Reset DB:   False
+[2026-07-23T07:20:53.155+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T07:20:53.159+0000] {subprocess.py:93} INFO - 
+[2026-07-23T07:20:53.161+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T07:20:53.163+0000] {subprocess.py:93} INFO - RUNNING SILVER LAYER STAGE - BATCH ID: run_initial_20260723_072051_a00b
+[2026-07-23T07:20:53.166+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T07:20:53.170+0000] {subprocess.py:93} INFO - Validating and Staging Channels...
+[2026-07-23T07:20:53.174+0000] {subprocess.py:93} INFO - No channels found in this batch.
+[2026-07-23T07:20:53.176+0000] {subprocess.py:93} INFO - Validating and Staging Videos...
+[2026-07-23T07:20:53.179+0000] {subprocess.py:93} INFO - No videos found in this batch.
+[2026-07-23T07:20:53.181+0000] {subprocess.py:93} INFO - Validating and Staging Comments...
+[2026-07-23T07:20:53.183+0000] {subprocess.py:93} INFO - No comments found in this batch.
+[2026-07-23T07:20:53.184+0000] {subprocess.py:93} INFO - 
+[2026-07-23T07:20:53.188+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T07:20:53.190+0000] {subprocess.py:93} INFO - SILVER STAGE SUMMARY
+[2026-07-23T07:20:53.193+0000] {subprocess.py:93} INFO - Total Raw Records Read: 0
+[2026-07-23T07:20:53.196+0000] {subprocess.py:93} INFO - Total Valid (Staged):    0
+[2026-07-23T07:20:53.198+0000] {subprocess.py:93} INFO - Total Rejected:         0
+[2026-07-23T07:20:53.202+0000] {subprocess.py:93} INFO - ========================================
+[2026-07-23T07:20:53.204+0000] {subprocess.py:93} INFO - 
+[2026-07-23T07:20:53.207+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T07:20:53.209+0000] {subprocess.py:93} INFO - PIPELINE COMPLETED SUCCESSFULLY!
+[2026-07-23T07:20:53.210+0000] {subprocess.py:93} INFO - ============================================================
+[2026-07-23T07:20:53.419+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-23T07:20:53.512+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-23T07:20:53.514+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=youtube_medallion_pipeline, task_id=validate_and_stage_silver_layer, run_id=manual__2026-07-23T07:19:01.697127+00:00, execution_date=20260723T071901, start_date=20260723T072049, end_date=20260723T072053
+[2026-07-23T07:20:53.578+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-23T07:20:53.624+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-23T07:20:53.630+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

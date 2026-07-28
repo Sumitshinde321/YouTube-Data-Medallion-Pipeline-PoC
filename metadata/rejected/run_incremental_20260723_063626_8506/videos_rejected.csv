@@ -1,0 +1,4 @@
+Id,Title,Description,Length,ViewsCount,Keywords,LikesCount,CategoryId,DislikesCount,UserId,IsLiveContent,ChannelId,GrabDate,_loaded_at,_source_file,_batch_id,_reject_reason
+,Faulty Video 1,Null ID,120.0,100,faulty,10,Music,0,user_1,False,UC__a4BYZxT-uvKGeATnSg8Q,2019-11-19 06:00:00.000,2026-07-23 06:36:27.807460,videos.csv,run_incremental_20260723_063626_8506,Null video ID; 
+faulty_vid_2,Faulty Video 2,Negative views,150.5,-1000,faulty,50,Comedy,10,user_2,False,UC__a4BYZxT-uvKGeATnSg8Q,2019-11-19 06:00:00.000,2026-07-23 06:36:27.807460,videos.csv,run_incremental_20260723_063626_8506,ViewsCount cannot be negative; 
+faulty_vid_3,Faulty Video 3,Invalid length datatype,not_a_number,2000,faulty,120,Education,5,user_3,False,UC__a4BYZxT-uvKGeATnSg8Q,2019-11-19 06:00:00.000,2026-07-23 06:36:27.807460,videos.csv,run_incremental_20260723_063626_8506,Data type casting failure; 
